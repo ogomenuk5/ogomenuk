@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="icon" type="image/png" href="images/icon.png" sizes="32x32">
+      <meta charset="UTF-8">
+      <title>Футбольні новини</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <header>
+         <h1>Футбольні новини</h1>
+      </header>
+      <nav>
+         <a href="index.html" style="text-decoration: underline;">Головна</a>
+         <a href="foot.html">Новини</a>
+         <a href="contact.html">Контакти</a>
+         <a href="#" id="feedbackBtn">Зворотній зв'язок</a>
+      </nav>
+      <div class="container fade-in" id="main-content">
+         <div class="news-item">
+            <div class="container">
+               <div id="carouselExampleCaptions" class="carousel slide">
+                  <div class="carousel-indicators">
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <img src="images/images1.jpg" class="d-block w-100" alt="..." >
+                        <div class="carousel-caption d-none d-md-block">
+                           <p>Україна виграє у вирішальному матчі</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <img src="images/images2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <p>Пів-фінал Ліги чемпіонів: Динамо Київ проти Реала</p>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <img src="images/images3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                           <p>Ліонель Мессі завершив кар'єру</p>
+                        </div>
+                     </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                  </button>
+               </div>
+               <!--./carousel-->
+            </div>
+         </div>
+		 
+         <!-- Таблиця УПЛ -->
+         <div class="news-item">
+            <div class="container">
+               <h2>Таблиця УПЛ</h2>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>Місце</th>
+                        <th>Команда</th>
+                        <th>Ігри</th>
+                        <th>Перемоги</th>
+                        <th>Нічиї</th>
+                        <th>Поразки</th>
+                        <th>Очки</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>1</td>
+                        <td>Шахтар</td>
+                        <td>15</td>
+                        <td>12</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>38</td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td>Динамо</td>
+                        <td>15</td>
+                        <td>11</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>36</td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>Зоря</td>
+                        <td>15</td>
+                        <td>9</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>30</td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>Олександрія</td>
+                        <td>14</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>24</td>
+                     </tr>
+                     <tr>
+                        <td>6</td>
+                        <td>Верес</td>
+                        <td>14</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>22</td>
+                     </tr>
+                     <tr>
+                        <td>7</td>
+                        <td>Ворскла</td>
+                        <td>14</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>15</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+		 
+         <div class="news-item">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <h2><img src="images/question.png" width="40px" alt="..." >Опитування</h2>
+                     <p><img src="images/tag.png" width="30px" alt="..." > Спрогнозуйте, яка збірна виграє <img src="images/trophy.png" width="25px" alt="..." > Лігу націй 2024/25</p>
+                     <div class="vote-item">
+                        <strong>Іспанія</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 55.47%;" aria-valuenow="55.47" aria-valuemin="0" aria-valuemax="100">55.47%</div>
+                        </div>
+                        <span>71 голос</span>
+                     </div>
+                     <div class="vote-item">
+                        <strong>Італія</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 4.69%;" aria-valuenow="4.69" aria-valuemin="0" aria-valuemax="100">4.69%</div>
+                        </div>
+                        <span>6 голосів</span>
+                     </div>
+                     <div class="vote-item">
+                        <strong>Німеччина</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 22.66%;" aria-valuenow="22.66" aria-valuemin="0" aria-valuemax="100">22.66%</div>
+                        </div>
+                        <span>29 голосів</span>
+                     </div>
+                     <div class="vote-item">
+                        <strong>Франція</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 6.25%;" aria-valuenow="6.25" aria-valuemin="0" aria-valuemax="100">6.25%</div>
+                        </div>
+                        <span>8 голосів</span>
+                     </div>
+                     <div class="vote-item">
+                        <strong>Португалія</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 6.25%;" aria-valuenow="6.25" aria-valuemin="0" aria-valuemax="100">6.25%</div>
+                        </div>
+                        <span>8 голосів</span>
+                     </div>
+                     <div class="vote-item">
+                        <strong>Нідерланди</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 2.34%;" aria-valuenow="2.34" aria-valuemin="0" aria-valuemax="100">2.34%</div>
+                        </div>
+                        <span>3 голоси</span>
+                     </div>
+                     <div class="vote-item">
+                        <strong>Хорватія</strong>
+                        <div class="progress">
+                           <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                        <span>0 голосів</span>
+                     </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                     <h2>Кращі букмекери</h2>
+                     <table class="table table-bordered">
+                        <thead>
+                           <tr>
+                              <th>№</th>
+                              <th>Букмекер</th>
+                              <th>Бонус</th>
+                              <th></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>1</td>
+                              <td><img src="images/favbet.jpg" alt="Favbet" style="width: 100px;"></td>
+                              <td><span><img src="images/present.png" width="20px" alt="..." > 15000₴</span></td>
+                              <td><button class="btn btn-warning">На сайт</button></td>
+                           </tr>
+                           <tr>
+                              <td>2</td>
+                              <td><img src="images/vbet.jpg" alt="Vbet" style="width: 100px;"></td>
+                              <td><span><span><img src="images/present.png" width="20px" alt="..." > 5000₴</span></td>
+                              <td><button class="btn btn-warning">На сайт</button></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <p>2024 Самі свіжі та актуальні спортивні новини.</p>
+      </footer>
+	  
+      <!-- Модальне вікно -->
+      <div id="feedbackModal" class="modal">
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Зв'язок</h2>
+            <div class="form-group">
+               <label for="name">Ім'я</label>
+               <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+            </div>
+            <div class="form-group">
+               <label for="email">Електронна адреса</label>
+               <input type="email" id="email" name="email" placeholder="Ваша електронна адреса" required>
+            </div>
+            <div class="form-group">
+               <label for="message">Повідомлення</label>
+               <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+            </div>
+            <button onclick="submitFeedback()">Відправити</button>
+         </div>
+      </div>
+	  
+      <script src="js/bootstrap.js"></script>
+      <script>
+         const feedbackModal = document.getElementById('feedbackModal');
+         const feedbackBtn = document.getElementById('feedbackBtn');
+         const closeBtn = document.querySelector('.close');
+         
+         feedbackBtn.onclick = function() {
+             feedbackModal.style.display = 'block';
+         };
+         
+         closeBtn.onclick = function() {
+             feedbackModal.style.display = 'none';
+         };
+         
+         window.onclick = function(event) {
+             if (event.target === feedbackModal) {
+                 feedbackModal.style.display = 'none';
+             }
+         };
+         
+         function submitFeedback() {
+             alert("Дякуємо за ваш відгук!");
+             feedbackModal.style.display = 'none';
+         }
+      </script>
+   </body>
+</html>

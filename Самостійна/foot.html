@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+   <head>
+      <link rel="icon" type="image/png" href="images/icon.png" sizes="32x32">
+      <meta charset="UTF-8">
+      <title>Новини</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/foot.css" rel="stylesheet">
+   </head>
+   <body>
+      <header>
+         <h1>Футбол</h1>
+         <p>Усі останні новини зі світу футболу</p>
+      </header>
+      <nav>
+         <a href="index.html">Головна</a>
+         <a href="foot.html" style="text-decoration: underline;">Новини</a>
+         <a href="contact.html">Контакти</a>
+      </nav>
+      <div class="container fade-in" id="main-content">
+         <div class="container">
+            <div class="news-item">
+               <h2>Україна виграє у вирішальному матчі</h2>
+               <p><strong>Дата:</strong> 20 листопада 2024</p>
+               <p>Національна збірна України перемогла у драматичному матчі проти Мальти з рахунком 3:1, здобувши право виступати на чемпіонаті Європи.</p>
+               <div class="iframe-box">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/958X0EltlOo?si=I8XmYCoVWSrS62Hb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               </div>
+            </div>
+            <div class="news-item">
+               <h2>Пів-фінал Ліги чемпіонів: Динамо Київ проти Реала</h2>
+               <p><strong>Дата:</strong> 25 грудня 2024 року</p>
+               <button class="btn btn-primary" id="show-timer-btn">Дізнатися більше</button>
+               <div class="timer" id="timer-box" style="display: none;">
+                  <p>Залишилося часу до матчу:</p>
+                  <p id="countdown">---</p>
+                  <p>Динамо Київ вперше за 20 років вийшло у пів-фінал Ліги чемпіонів! Гра проти мадридського Реала обіцяє стати епічною подією.</p>
+               </div>
+            </div>
+            <div class="news-item">
+               <h2>Ліонель Мессі завершив кар'єру</h2>
+               <p><strong>Дата:</strong> 15 листопада 2024</p>
+               <p>Легендарний футболіст Ліонель Мессі оголосив про завершення професійної кар'єри після 20 років на футбольному полі.</p>
+               <div class="iframe-box">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/A9RBHPKjXiI?si=G6ZyzNSJOsW35E_f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+	  
+      <footer>
+         <p>2024 Самі свіжі та актуальні спортивні новини.</p>
+      </footer>
+	  
+      <script src="js/bootstrap.js"></script>
+      <script>
+         const eventDate = new Date("2024-12-25T20:00:00").getTime();
+         let interval;
+         
+         function updateCountdown() {
+             const now = new Date().getTime();
+             const distance = eventDate - now;
+         
+             if (distance < 0) {
+                 document.getElementById("countdown").textContent = "Матч розпочався!";
+                 clearInterval(interval); // Зупиняємо таймер, якщо подія настала
+                 return;
+             }
+         
+             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+         
+             document.getElementById("countdown").textContent =
+                 `${days} дн ${hours} год ${minutes} хв ${seconds} сек`;
+         }
+         
+         // Обробник для кнопки
+         document.getElementById("show-timer-btn").addEventListener("click", function () {
+             const timerBox = document.getElementById("timer-box");
+             timerBox.style.display = "block"; // Показуємо блок із таймером
+             updateCountdown(); // Викликаємо функцію одразу для першого оновлення
+             interval = setInterval(updateCountdown, 1000); // Запускаємо таймер із оновленням кожну секунду
+         });
+      </script>
+   </body>
+</html>
