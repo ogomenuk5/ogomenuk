@@ -52,36 +52,45 @@
       </footer>
 	  
       <script src="js/bootstrap.js"></script>
-      <script>
-         const eventDate = new Date("2024-12-25T20:00:00").getTime();
-         let interval;
-         
-         function updateCountdown() {
-             const now = new Date().getTime();
-             const distance = eventDate - now;
-         
-             if (distance < 0) {
-                 document.getElementById("countdown").textContent = "Матч розпочався!";
-                 clearInterval(interval); // Зупиняємо таймер, якщо подія настала
-                 return;
-             }
-         
-             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-         
-             document.getElementById("countdown").textContent =
-                 `${days} дн ${hours} год ${minutes} хв ${seconds} сек`;
-         }
-         
-         // Обробник для кнопки
-         document.getElementById("show-timer-btn").addEventListener("click", function () {
-             const timerBox = document.getElementById("timer-box");
-             timerBox.style.display = "block"; // Показуємо блок із таймером
-             updateCountdown(); // Викликаємо функцію одразу для першого оновлення
-             interval = setInterval(updateCountdown, 1000); // Запускаємо таймер із оновленням кожну секунду
-         });
-      </script>
+		<script>
+		   const eventDate = new Date("2024-12-25T20:00:00").getTime();
+		   let interval;
+		   let isTimerVisible = false; // Стан видимості таймера
+
+		   function updateCountdown() {
+			   const now = new Date().getTime();
+			   const distance = eventDate - now;
+
+			   if (distance < 0) {
+				   document.getElementById("countdown").textContent = "Матч розпочався!";
+				   clearInterval(interval); // Зупиняємо таймер, якщо подія настала
+				   return;
+			   }
+
+			   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			   document.getElementById("countdown").textContent =
+				   `${days} дн ${hours} год ${minutes} хв ${seconds} сек`;
+		   }
+
+		   // Обробник для кнопки
+		   document.getElementById("show-timer-btn").addEventListener("click", function () {
+			   const timerBox = document.getElementById("timer-box");
+
+			   if (isTimerVisible) {
+				   timerBox.style.display = "none"; // Ховаємо блок із таймером
+				   clearInterval(interval); // Зупиняємо оновлення таймера
+			   } else {
+				   timerBox.style.display = "block"; // Показуємо блок із таймером
+				   updateCountdown(); // Викликаємо функцію одразу для першого оновлення
+				   interval = setInterval(updateCountdown, 1000); // Запускаємо таймер із оновленням кожну секунду
+			   }
+
+			   isTimerVisible = !isTimerVisible; // Перемикаємо стан видимості таймера
+		   });
+		</script>
    </body>
 </html>

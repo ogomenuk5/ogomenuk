@@ -1,5 +1,16 @@
 @charset "utf-8"
 
+@font-face {
+  font-family: "Comforter";
+
+  src: url("../fonts/Comforter-Regular.ttf");
+}
+
+h1{
+	font-family: "Comforter";
+	font-size: 50px;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
@@ -164,4 +175,14 @@ th {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+/* Анімація обертання */
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+    }
+    to {
+         transform: rotate(360deg);
+    }
 }
